@@ -2,14 +2,20 @@ from django.urls import path
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from .views import WorkerViewSet, ClientViewSet, LocationViewSet, AppointmentViewSet, ScheduleViewSet
+from .views import (WorkerViewSet,
+                    ClientViewSet,
+                    LocationViewSet,
+                    AppointmentViewSet,
+                    ScheduleViewSet,
+                    ManagerViewSet)
 
 routes = routers.SimpleRouter()
 routes.register('workers', WorkerViewSet, basename='workers')
 routes.register('clients', ClientViewSet, basename='clients')
 routes.register('locations', LocationViewSet, basename='locations')
 routes.register('appointments', AppointmentViewSet, basename='appointments')
-routes.register('work_schedules', ScheduleViewSet, basename='appointments')
+routes.register('work_schedules', ScheduleViewSet, basename='work_schedules')
+routes.register('managers', ManagerViewSet, basename='managers')
 
 urlpatterns = [
     *routes.urls,
