@@ -7,7 +7,8 @@ from .views import (WorkerViewSet,
                     LocationViewSet,
                     AppointmentViewSet,
                     ScheduleViewSet,
-                    ManagerViewSet)
+                    ManagerViewSet
+                    )
 
 routes = routers.SimpleRouter()
 routes.register('workers', WorkerViewSet, basename='workers')

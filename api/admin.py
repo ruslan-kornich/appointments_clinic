@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from .models import Client, Schedule, Worker, Location, Appointment
+from .models import Location, Worker, Client, Schedule, Appointment
 
-# Register your models here.
 admin.site.register(Client)
 admin.site.register(Schedule)
 admin.site.register(Worker)
