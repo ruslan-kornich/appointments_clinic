@@ -54,7 +54,18 @@ Test Users url admin/ :
 Unregistered users and users with Client rights can only view the list of specialists and select the schedule of a specialist
 ## API Docs:
 
-
+Authorization is based on a token JWT
+```bash
+/api/v1/workers/login/
+```
+Instead, you need to pass your username and password as a form data via POST request to this endpoint:
+You'll get the tokens:
+```bash
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2ODgwMjM5OCwiaWF0IjoxNjY4NzE1OTk4LCJqdGkiOiJlMDM0OGY3NmEzNTU0YzdiYWVjNTMzYjJhNzQ3OTU5MCIsInVzZXJfaWQiOjg1fQ.NEGeUd7bciv3YA2jK2ajNzbozxM51RI4Fq3ChR0-swc",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODAyMzk4LCJpYXQiOjE2Njg3MTU5OTgsImp0aSI6IjFkOTU4ZjJmN2MxYzQ0Nzk5ZTA4OGJmNGNkNjhkNWUyIiwidXNlcl9pZCI6ODV9.AsPi-s80rcS819RAIUoXqp4O17dRLpTRCetuBQPhATs"
+}
+```
 ## Intended data structure
 ### /api/v1/workers/
 - GET - Availability data is available to all users
