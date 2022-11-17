@@ -10,6 +10,7 @@ from .views import (WorkerViewSet,
                     ManagerViewSet
                     )
 
+#app_name = 'api'
 routes = routers.SimpleRouter()
 routes.register('workers', WorkerViewSet, basename='workers')
 routes.register('clients', ClientViewSet, basename='clients')
@@ -20,7 +21,7 @@ routes.register('managers', ManagerViewSet, basename='managers')
 
 urlpatterns = [
     *routes.urls,
-    path('login/', TokenObtainPairView.as_view(), name='login'),
+    path('login/', TokenObtainPairView.as_view(), name='login_url'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
 ]

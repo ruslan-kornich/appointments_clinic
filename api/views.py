@@ -45,7 +45,7 @@ class ScheduleViewSet(viewsets.ModelViewSet):
 class ManagerViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsManager | IsAdmin]
+    permission_classes = [IsAdmin]
 
     def get_queryset(self):
         user = self.request.user
