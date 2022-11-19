@@ -24,4 +24,5 @@ urlpatterns = [
     path('login/', TokenObtainPairView.as_view(), name='login_url'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
+
 ]
