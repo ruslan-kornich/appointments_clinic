@@ -10,7 +10,7 @@ from .views import (WorkerViewSet,
                     ManagerViewSet
                     )
 
-#app_name = 'api'
+app_name = 'api'
 routes = routers.SimpleRouter()
 routes.register('workers', WorkerViewSet, basename='workers')
 routes.register('clients', ClientViewSet, basename='clients')
@@ -18,6 +18,7 @@ routes.register('locations', LocationViewSet, basename='locations')
 routes.register('appointments', AppointmentViewSet, basename='appointments')
 routes.register('work_schedules', ScheduleViewSet, basename='work_schedules')
 routes.register('managers', ManagerViewSet, basename='managers')
+
 
 urlpatterns = [
     *routes.urls,
