@@ -9,7 +9,7 @@ from .serializers import (WorkerSerializer,
                           LocationSerializer,
                           AppointmentSerializer,
                           ScheduleSerializer,
-                          UserSerializer, )
+                          UserSerializer)
 
 
 class WorkerViewSet(viewsets.ModelViewSet):

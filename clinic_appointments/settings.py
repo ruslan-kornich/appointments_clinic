@@ -54,7 +54,7 @@ ROOT_URLCONF = 'clinic_appointments.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'accounts', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -161,3 +161,9 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'auth.User'
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+DEFAULT_FROM_EMAIL = 'free-protect@ukr.net'
+EMAIL_USE_TLC = True
+EMAIL_HOST = "smtp.ukr.net"
